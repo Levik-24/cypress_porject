@@ -2,8 +2,6 @@ name: Cypress Tests using Cypress Docker Image
 
 on: [push]
 
-paths:
-  - 'D:\cypreesAutomation\cypress\e2e\2-advanced-examples\second_video.cy.js'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
