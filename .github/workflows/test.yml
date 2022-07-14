@@ -1,12 +1,19 @@
-name: learn-github-actions
+name: Cypress Tests using Cypress Docker Image
+
 on: [push]
+
 jobs:
-  check-bats-version:
-    runs-on: windows-latest
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
         with:
-          node-version: '16'
-      - run: npm install -g bats
-      - run: bats -v
+          # Specify Browser since container image is compile with Firefox
+          browser: chrome
