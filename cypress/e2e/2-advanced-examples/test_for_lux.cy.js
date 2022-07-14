@@ -1,5 +1,3 @@
-import { should } from "chai"
-
 describe ('My first test', function () {
     
     it('testing of site', function () {
@@ -46,10 +44,9 @@ describe ('My first test', function () {
         //assert that "Medical news and articles" with any news section is displayed
         cy.get('.img-container.position-relative [href="/مقالات-طبية/امراض-باطنية/dasdadsadasdasddsadasdsadsadsa-5996"]').should('be.visible');
 
-
         //assert that "latest medical video" with any video is displayed
-        cy.get('[class="primary"]').should('be.visible')
-        cy.get('[class="video-image-container"]').should('be.visible')
+        cy.get('[class="filter-1"]').click()
+        cy.get('[id="select2-question-sort-result-i202--view_count"]').should('be.visible')
 
 
 

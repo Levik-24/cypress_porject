@@ -41,7 +41,7 @@ describe ('some examles', function () {
         cy.url().should('include', 'https://automation.altibb.com/')
 
          //assert that "Medical news and articles" with any news section is displayed
-         cy.get('.img-container.position-relative [href="/مقالات-طبية/امراض-باطنية/dasdadsadasdasddsadasdsadsadsa-5996"]').should('be.visible');
+         cy.get('.img-container.position-relative [href="/مقالات-طبية/امراض-الجهاز-الهضمي/انماط-شخصية-6009"]').should('be.visible');
 
         //assert that "latest medical video" with any video is displayed
         cy.get('[class="video-image-container"]').should('be.visible')
