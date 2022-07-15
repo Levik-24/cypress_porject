@@ -36,6 +36,8 @@ describe ('some examles', function () {
         //cy.get('[class="primary-article-title"]').should('be.visible')
 
         cy.go('back')
+        cy.reload()
+
         //click on "view all questions" btn and assert the redirection
         cy.get('[class="show-all-questions-wrapper"]').click({force: true})
         cy.url().should('include', 'https://automation.altibb.com/')
