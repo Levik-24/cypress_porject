@@ -33,7 +33,7 @@ describe ('some examles', function () {
         cy.get('[class="main-search-header"]').should('contain', 'ابحث عن طبيب واحجز موعد بكل سهولة ')
         
         //assert that "Free suggested questions and answers" section is displayed
-        cy.get('[class="primary-article-title"]').should('be.visible')
+        //cy.get('[class="primary-article-title"]').should('be.visible')
 
         cy.go('back')
         //click on "view all questions" btn and assert the redirection
